@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="angular.min.js"></script>
+<title>login form</title>
+</head>
+<body>
+<h1>Registeration form</h1>
+<div ng-app="myapp" ng-controller="myctl">
+First name:<input type="text" ng-model="firstname">
+Last name:<input type="text"  ng-model="lastname"><br><br>
+<h4>you entered: {{fullname()}}</h4><br><br>
+Gender:<br>
+male:<input id="ma" type="radio" ng-model="male" value="mal"><br>
+female:<input id="fe" type="radio" ng-model="female" value="fem"><br><br>
+<div ng-switch="male">
+<div ng-switch-when="mal">
+<h4>gender:male</h4>
+</div>
+<div ng-switch="female">
+<div ng-switch-when="fem">
+<h4>gender:female</h4>
+</div>
+Department:<br>
+cse:<input id ="cs" type="checkbox" ng-model="cse"><br>
+ece:<input id ="ec" type="checkbox" ng-model="ece"><br><br>
+<h4 ng-hide="cse">Dept:CSE</h4>
+<h4 ng-show="ece">Dept:ECE</h4>
+Course:<br>
+<select class="form-control" ng-model="course">
+<option disabled selected value>select an option </option>
+<option value="ds">datastructure</option>
+<option value="dsci">datascience</option>
+</select>
+<div ng-switch="course">
+<div ng-switch-when="ds">
+<h4>Course:datastructure</h4>
+</div>
+<div ng-switch="course">
+<div ng-switch-when="dsci">
+<h4>Course:datascience</h4>
+</div>
+</div>
+<script>
+angular.module("myapp",[]).controller("myctl",function($scope){
+   $scope.firstname="";
+   $scope.lastname="";
+   $scope.gender= "";
+   $scope.department="";
+   $scope.course= "";
+   $scope.fullname=function(){
+    return $scope.firstname + " " + $scope.lastname;
+   };
+   
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img src="srec.jpg" alt="srec.com" width="104" height="142">
+<form action="file:///C:/shtml/s.htm" target="_blank" method="GET">
+  <fieldset>
+    <legend>Personal information:</legend>
+  First name:<br>
+  <input type="text" name="firstname">
+  <br><br>
+    Last name:<br>
+  <input type="text" name="lastname">
+  <br><br>
+   Mail id:<br>
+   <input type="text" name="mail id">
+   <br><br>
+   College:<br>
+   <input type="text" name="college">
+   <br><br>
+   Department:<br>
+   <select name="departments">
+    <option value="CSE">CSE</option>
+    <option value="MECH">MECH</option>
+    <option value="EEE">EEE</option>
+    <option value="ECE">ECE</option>
+  </select>
+  <br><br>
+   Address:<br>
+   <input  type="text" name="address">
+   <br><br>
+   
+   Gender:<br>
+   <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+  <br><br>
+  <input type="submit" value="Submit">
+ 
+  <input type="button" on click="alert" value="Cancel">
+  </fieldset>
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of a text input field is 20 characters.</p>
+
+</body>
+</html>
