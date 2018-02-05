@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Push Operation</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var names= ["Babu", "Oviya", "Adhi", "Manu"];
+document.getElementById("demo").innerHTML = names;
+
+function myFunction() {
+    names.push("Kavi");
+    document.getElementById("demo").innerHTML = names;
+}
+</script>
+
+</body>
+</html>
