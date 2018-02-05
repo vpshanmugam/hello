@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="angular.min.js"></script>
+<title>login form</title>
+</head>
+<body>
+<h1>Registeration form</h1>
+<div ng-app="myapp" ng-controller="myctl">
+First name:<input type="text" ng-model="firstname">
+Last name:<input type="text"  ng-model="lastname" required><br><br>
+{{fullname()}}<br><br>
+Gender:<br>
+male:<input id="ma" type="radio" ng-model="male" value="mal"><br>
+female:<input id="fe" type="radio" ng-model="female" value="fem"><br><br>
+Department:<br>
+cse:<input id ="cs" type="checkbox" ng-model="cse"><br>
+ece:<input id ="ec" type="checkbox" ng-model="ece"><br><br>
+Course:<br><br>
+<select class="form-control" ng-model="course">
+<option disabled selected value>-- select an option --</option>
+<option value="datastructure">datastructure</option>
+<option value="datascience">datascience</option>
+</select>
+</div>
+<script>
+angular.module("myapp",[]).controller("myctl",function($scope){
+   $scope.firstname="";
+   $scope.lastname="";
+   $scope.gender= ""
+   $scope.course= "";
+   $scope.fullname=function(){
+    return $scope.firstname + " " + $scope.lastname + " " +$scope.gender + " " + $scope.course;
+   };
+   
+});
+</script>
+
+</body>
+</html>
