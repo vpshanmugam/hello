@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html data-ng-app="demo">
+  <head>
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div data-ng-controller="DemoController">
+      <ul>
+        <li data-ng-repeat="item in items">
+          {{item}}
+          <button data-ng-click="removeItem($index)">pop</button>
+        </li>
+      </ul>
+      <input data-ng-model="newItem"><button data-ng-click="addItem(newItem)">push</button>
+    </div>
+  </body>
+</html>
