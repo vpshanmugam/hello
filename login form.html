@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World!</h1>
+User Name:
+<input type="text" placeholder="Enter Username" name="uname" id="v1" required> <br>
+Password:
+<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+<br>
+<button type="button" onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+if(document.getElementById('v1').value == ""){
+    document.getElementById('v1').style.borderColor = "red";}
+if(document.getElementById('psw').value == "")
+document.getElementById('psw').style.borderColor = "green";
+}
+</script>
+
+</body>
+</html>

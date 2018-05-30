@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dp</title>
+<div align="center"  >
+	<font color="black">
+	<font size="7">
+	DATE PICKER<br>
+	</font>
+	</div>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+function validateForm()
+{
+alert(document.getElementById('name').value)
+document.getElementById("name").style.borderColor = " purple";
+ var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+$( function() {
+    $( "#datepicker" ).datepicker({minDate:0});
+  } );
+
+    
+
+
+</script>
+</head>
+<body>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post"><br><br><br>
+Name: <input type="text" name="fname" id="name">
+Password : <input type="text" name="password"><br><br>
+<input type="submit" value="Submit">
+
+<p>Date: <input type="text" id="datepicker"></p>
+ <style>
+body  {
+    background-image: url("nature.jpg");
+    background-color: #cccccc;
+}
+</style>
+</form>
+
+
+</body>
+</html>

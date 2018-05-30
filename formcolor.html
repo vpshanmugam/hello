@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Form Color</title></head>
+	<div align="center"  >
+	<font color="black">
+	<font size="7">
+	LOGIN PAGE<br>
+	</font>
+	</div>
+<body>
+    Username:&emsp;&ensp;&ensp;<input type="text" id="name" class="vp"><br><br>
+    Password:&emsp;&ensp;&nbsp;&ensp;<input type="text" id="texts" class="vp"><br><br>
+
+    Rakkesh:&emsp;&ensp;&ensp;&nbsp;&ensp;<input type="text" id="name" class="vk"><br><br>
+    Vivekananthan:&nbsp;<input type="text" id="texts" class="vk"><br><br>
+
+ Shanmugam :&ensp;&ensp;<input type="text" id="name" class="vp"><br><br>
+
+   &emsp;&emsp;&emsp;&emsp; <button type="button" onclick="myFunction()">login</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            
+            var len=document.getElementsByClassName('vp');
+            
+            
+            for(var i=0;i<len.length;i++){
+                
+                len[i].style.backgroundColor="green";
+            }
+
+	var len=document.getElementsByClassName('vk');
+           
+         for(var j=0;j<len.length;j++){
+                
+                len[j].style.backgroundColor="blue";
+            }
+          
+            }
+           </script>
+		  <style>
+body  {
+    background-image: url("nature.jpg");
+    background-color: #cccccc;
+}
+</style>
+
+</body>
+    </html>
